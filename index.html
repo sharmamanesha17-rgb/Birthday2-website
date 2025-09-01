@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Happy Birthday!</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+      font-family: 'Segoe UI', sans-serif;
+      overflow-x: hidden;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 60px;
+      margin-top: 50px;
+      color: #fff;
+      text-shadow: 2px 2px 8px #ff4081;
+      animation: glow 2s infinite alternate;
+    }
+
+    @keyframes glow {
+      from { text-shadow: 0 0 10px #ff4081, 0 0 20px #ff80ab; }
+      to   { text-shadow: 0 0 20px #f50057, 0 0 40px #ff4081; }
+    }
+
+    h2 {
+      color: #fff;
+      font-size: 30px;
+      margin-top: 10px;
+    }
+
+    img {
+      width: 250px;
+      height: 250px;
+      border-radius: 50%;
+      margin-top: 20px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    }
+
+    .message {
+      margin: 30px auto;
+      width: 70%;
+      font-size: 22px;
+      color: #fff;
+      background: rgba(255, 64, 129, 0.6);
+      padding: 20px;
+      border-radius: 15px;
+      line-height: 1.5;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    }
+
+    /* Balloon animation */
+    .balloon {
+      position: absolute;
+      bottom: -150px;
+      width: 80px;
+      height: 100px;
+      background: #ff4081;
+      border-radius: 50% 50% 50% 50%;
+      animation: float 8s infinite ease-in;
+    }
+
+    .balloon:before {
+      content: "";
+      position: absolute;
+      bottom: -20px;
+      left: 50%;
+      width: 2px;
+      height: 40px;
+      background: #fff;
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0) rotate(0deg); }
+      100% { transform: translateY(-100vh) rotate(360deg); }
+    }
+
+    .cake {
+      position: absolute;
+      bottom: -150px;
+      width: 80px;
+      height: 80px;
+      background: url('cake.png') no-repeat center/contain; /*use your cake image*/
+      animation: float 8s infinite ease-in;
+      display: none; /*hide cakes initially*/
+    }  
+
+
+    button {
+      padding: 12px 20px;
+      font-size: 18px;
+      background: #ff4081;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-top: 20px;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background: #f50057;
+    }
+
+    .hidden-message {
+      display: none;
+      margin-top: 20px;
+      font-size: 24px;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <h1>🎉 Happy Birthday Kashev 🎂</h1>
+  <h2>Wishing you joy, love & laughter today!</h2>
+
+  <!-- Replace this with birthday person's photo -->
+  <img src="photo.jpg" alt="Birthday Person">
+
+  <div class="message">
+    Dear Kashev, <br>
+    You make my world brighter with your smile.  
+    May your special day be filled with love, surprises, and endless happiness.And I really lovee youu soooo muchhh meraaaa bcchhaa  
+    Have the best year ahead! 💖✨
+  </div>
+
+  <button onclick="showMessage()">🎁 Click for a Surprise</button>
+  <div class="hidden-message" id="hiddenMsg">💌 You are truly special, and I’m so lucky to have you in my life. Happy Birthday jnnn! 💕</div>
+
+  <!-- Balloons -->
+  <div class="balloon" style="left:10%; background:#ff80ab;"></div>
+  <div class="balloon" style="left:30%; background:#ff4081;"></div>
+  <div class="balloon" style="left:50%; background:#f48fb1;"></div>
+  <div class="balloon" style="left:70%; background:#ec407a;"></div>
+  <div class="balloon" style="left:90%; background:#f06292;"></div>
+
+  <!-- Cakes --> 
+  <div class="cake" style="left:10%;"></div>
+  <div class="cake" style="left:30%;"></div>
+  <div class="cake" style="left:50%;"></div>
+  <div class="cake" style="left:70%;"></div>
+  <div class="cake" style="left:90%;"></div>
+
+
+  
+
+  <!-- Background Music -->
+  <audio autoplay loop>
+    <source src="https://www.bensound.com/bensound-music/bensound-celebration.mp3" type="audio/mp3">
+  </audio>
+
+  <script>
+    function showMessage() {
+      document.getElementById('hiddenMsg').style.display = 'block';
+      document.querySelectorAll('.cake').forEach(c => c.style.display = 'block');
+    }
+  </script>
+</body>
+</html>
